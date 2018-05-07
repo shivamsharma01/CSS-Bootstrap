@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .container {
+            border: 1px solid slateblue;
+            border-radius: 5px;
+            margin: 10px 0px;
+            padding: 10px;
+        }
+
+        .flexcontainer {
+            display: flex;
+        }
+
+        .flexitemgrow1 {
+            flex-grow: 1;
+            border: 3px solid;
+        }
+
+        #main {
+            width: 350px;
+            height: 100px;
+            border: 1px solid #c3c3c3;
+            display: -webkit-flex;
+            /* Safari */
+            display: flex;
+        }
+
+        #main div {
+            -webkit-flex-grow: 1;
+            /* Safari 6.1+ */
+            -webkit-flex-shrink: 1;
+            /* Safari 6.1+ */
+            -webkit-flex-basis: 100px;
+            /* Safari 6.1+ */
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 100px;
+        }
+
+        #main div:nth-of-type(2) {
+            -webkit-flex-shrink: 3;
+            /* Safari 6.1+ */
+            flex-shrink: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="flexcontainer">
+            <div class="flexitem1" style="background-color:lightblue;">This is statement 1 of 3</div>
+            <div class="flexitem2" style="background-color:lightgreen;">This is statement 2 of 3</div>
+            <div class="flexitem3" style="background-color:lightslategray;">This is statement 3 of 3</div>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Defining Flex Direction</h2>
+        <div class="flexcontainer" style="flex-direction: column;">
+            <div class="flexitem1" style="background-color:lightblue;">This is statement 1 of 3</div>
+            <div class="flexitem2" style="background-color:lightgreen;">This is statement 2 of 3</div>
+            <div class="flexitem3" style="background-color:lightslategray;">This is statement 3 of 3</div>
+        </div>
+    </div>
+    <div class="container">
+        <h2>To reverse the column order</h2>
+        <div class="flexcontainer" style="flex-direction: column-reverse;">
+            <div class="flexitem1" style="background-color:lightblue;">This is statement 1 of 3</div>
+            <div class="flexitem2" style="background-color:lightgreen;">This is statement 2 of 3</div>
+            <div class="flexitem3" style="background-color:lightslategray;">This is statement 3 of 3</div>
+        </div>
+    </div>
+    <div class="container">
+        <h2>To reverse the row order</h2>
+        <div class="flexcontainer" style="flex-direction: row-reverse;">
+            <div class="flexitem1" style="background-color:lightblue;">This is statement 1 of 3</div>
+            <div class="flexitem2" style="background-color:lightgreen;">This is statement 2 of 3</div>
+            <div class="flexitem3" style="background-color:lightslategray;">This is statement 3 of 3</div>
+        </div>
+    </div>
+    <div class="container">
+        <h2>To Align and Justify to the right</h2>
+        <div class="flexcontainer" style="justify-content: flex-end;">
+            <div class="flexitem1" style="background-color:lightblue;">This is statement 1 of 3</div>
+            <div class="flexitem2" style="background-color:lightgreen;">This is statement 2 of 3</div>
+            <div class="flexitem3" style="background-color:lightslategray;">This is statement 3 of 3</div>
+        </div>
+    </div>
+    <div class="container">
+        <h2>To Align and Justify to the center</h2>
+        <div class="flexcontainer" style="justify-content: center;">
+            <div class="flexitem1" style="background-color:lightblue;">This is statement 1 of 3</div>
+            <div class="flexitem2" style="background-color:lightgreen;">This is statement 2 of 3</div>
+            <div class="flexitem3" style="background-color:lightslategray;">This is statement 3 of 3</div>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Flex items separated</h2>
+        <div class="flexcontainer" style="justify-content: space-between;">
+            <div class="flexitem1" style="background-color:lightblue;">This is statement 1 of 3</div>
+            <div class="flexitem2" style="background-color:lightgreen;">This is statement 2 of 3</div>
+            <div class="flexitem3" style="background-color:lightslategray;">This is statement 3 of 3</div>
+        </div>
+    </div>
+    <div class="container">
+        <h2>To center flex items both horizontally and vertically</h2>
+        <div class="flexcontainer" style="justify-content: center; align-items: center;">
+            <div class="flexitem1" style="background-color:lightblue;">This is statement 1 of 3</div>
+            <div class="flexitem2" style="background-color:lightgreen;">This is statement 2 of 3</div>
+            <div class="flexitem3" style="background-color:lightslategray;">This is statement 3 of 3</div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Wrapping</h1>
+        <h2>Resized to fit into one column or one row when a flex container is not large enough, flex items are not able to wrap
+            by default. By using flex-wrap: wrap;, any flex items causing overflow will be wrapped to the next line.</h2>
+        <h2>Default</h2>
+        <div class="flexcontainer">
+            <div class="flexitem1" style="background-color:lightblue;">This is statement 1 of 9</div>
+            <div class="flexitem2" style="background-color:lightgreen;">This is statement 2 of 9</div>
+            <div class="flexitem3" style="background-color:lightslategray;">This is statement 3 of 9</div>
+            <div class="flexitem4" style="background-color:lightgreen;">This is statement 4 of 9</div>
+            <div class="flexitem5" style="background-color:lightslategray;">This is statement 5 of 9</div>
+            <div class="flexitem6" style="background-color:lightgreen;">This is statement 6 of 9</div>
+            <div class="flexitem7" style="background-color:lightslategray;">This is statement 7 of 9</div>
+            <div class="flexitem8" style="background-color:lightgreen;">This is statement 8 of 9</div>
+            <div class="flexitem9" style="background-color:lightslategray;">This is statement 9 of 9</div>
+        </div>
+        <h2>with 'flex-wrap: wrap;'</h2>
+        <div class="flexcontainer" style="flex-wrap: wrap;">
+            <div class="flexitem1" style="background-color:lightblue;">This is statement 1 of 9</div>
+            <div class="flexitem2" style="background-color:lightgreen;">This is statement 2 of 9</div>
+            <div class="flexitem3" style="background-color:lightslategray;">This is statement 3 of 9</div>
+            <div class="flexitem4" style="background-color:lightgreen;">This is statement 4 of 9</div>
+            <div class="flexitem5" style="background-color:lightslategray;">This is statement 5 of 9</div>
+            <div class="flexitem6" style="background-color:lightgreen;">This is statement 6 of 9</div>
+            <div class="flexitem7" style="background-color:lightslategray;">This is statement 7 of 9</div>
+            <div class="flexitem8" style="background-color:lightgreen;">This is statement 8 of 9</div>
+            <div class="flexitem9" style="background-color:lightslategray;">This is statement 9 of 9</div>
+        </div>
+    </div>
+    <div class="container">
+        <h2>To grow a flex item (default size is 0):</h2>
+        <div class="flexcontainer">
+            <div class="flexitemgrow1" style="background-color:lightblue;">This is statement 1 of 3</div>
+            <div class="flexitemgrow2" style="background-color:lightgreen;">This is statement 2 of 3</div>
+            <div class="flexitemgrow3" style="background-color:lightslategray;">This is statement 3 of 3</div>
+        </div>
+    </div>
+    <div class="container">
+        <h2>To shrink a flex item (default size is 0):</h2>
+        <div id="main">
+            <div style="background-color:coral;"></div>
+            <div style="background-color:lightblue;"></div>
+            <div style="background-color:khaki;"></div>
+            <div style="background-color:pink;"></div>
+            <div style="background-color:lightgrey;"></div>
+        </div>
+    </div>
+    <div class="container">
+        <h2>To set the precise size of each flex item</h2>
+        <div class="flexcontainer">
+            <div class="flexitem1" style="background-color:lightblue;flex-basis: 25%;">This is statement 1 of 3</div>
+            <div class="flexitem2" style="background-color:lightgreen;flex-basis: 25px;">This is statement 2 of 3</div>
+            <div class="flexitem3" style="background-color:lightslategray;">This is statement 3 of 3</div>
+        </div>
+    </div>
+    <div class="container">
+        <h2>shorthand for grow, shrink and basis</h2>
+        <div class="flexcontainer">
+            <div class="flexitem1" style="background-color:lightblue;flex: 2 1 100px;">This is statement 1 of 3</div>
+            <div class="flexitem2" style="background-color:lightgreen;flex: 5 1 5%;">This is statement 2 of 3</div>
+            <div class="flexitem3" style="background-color:lightslategray; flex: 1 5 5%;">This is statement 3 of 3</div>
+        </div>
+    </div>
+</body>
+
+</html>
