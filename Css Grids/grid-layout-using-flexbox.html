@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .parent {
+            font-family: Arial;
+            font-size: 45px;
+            background: black;
+            color: #ffffff;
+            padding: 20px;
+        }
+
+        .column {
+            padding: 10px;
+        }
+
+        .sidebar {
+            background: coral;
+        }
+
+        .main {
+            background: blueviolet;
+        }
+
+        @media only screen and (min-width: 641px) {
+            .parent {
+                display: flex;
+            }
+            .column {
+                flex: 1;
+            }
+        }
+
+        @media only screen and (min-width: 1025px) {
+            .main {
+                flex: 2;
+            }
+            .sidebar {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2 style="text-align: center">change view area to see responsiveness</h2>
+    <div class="parent">
+        <div class="column sidebar">This is the sidebar</div>
+        <div class="column main">This is main Div</div>
+    </div>
+</body>
+
+</html>
